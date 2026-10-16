@@ -1,0 +1,149 @@
+.certifications-section {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.cert-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.cert-card:hover {
+  border-color: rgba(20, 184, 166, 0.4);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(3, 7, 18, 0.6);
+}
+
+.cert-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cert-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.cert-doc-icon {
+  color: var(--accent-light);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-doc-icon {
+  transform: scale(1.1);
+}
+
+.cert-category-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.cert-content-middle {
+  margin-bottom: 24px;
+}
+
+.cert-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+
+.cert-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.cert-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  gap: 12px;
+}
+
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--accent-lighter);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  transition: var(--transition-fast);
+}
+
+.cert-view-btn:hover {
+  background: var(--accent-gradient);
+  color: #070c18;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+}
+
+.cert-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.cert-card:hover .cert-view-btn .cert-arrow-icon {
+  transform: translateX(3px);
+}
+
+.cert-verified-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: #34d399;
+}
+
+.verified-check {
+  color: #34d399;
+}
+
+@media (max-width: 640px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}

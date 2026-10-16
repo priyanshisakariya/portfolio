@@ -1,0 +1,195 @@
+/* ==========================================================================
+   SERVICES SECTION - MODERN FREELANCE SERVICE CARDS
+   ========================================================================== */
+
+.services-section {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.service-card:hover {
+  border-color: rgba(20, 184, 166, 0.35);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(3, 7, 18, 0.6);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+  transition: var(--transition-fast);
+}
+
+.service-card:hover .service-icon-box {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: var(--accent-light);
+  transform: scale(1.05);
+}
+
+.service-number {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.service-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-category {
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-light);
+  margin-bottom: 6px;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.service-description {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-deliverables {
+  background: rgba(7, 12, 24, 0.55);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.deliverables-heading {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.deliverables-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.deliverable-check {
+  color: var(--accent-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.service-tag-chip {
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+}
+
+.service-card-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.service-discuss-btn {
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-xs);
+}
+
+.service-discuss-btn:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+}
+
+.service-arrow {
+  transition: transform 0.2s ease;
+}
+
+.service-discuss-btn:hover .service-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 24px;
+  }
+}

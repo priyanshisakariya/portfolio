@@ -1,0 +1,72 @@
+.engineering-approach-section {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.approach-card {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+}
+
+.approach-card:hover {
+  border-color: rgba(20, 184, 166, 0.35);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(3, 7, 18, 0.5);
+}
+
+.approach-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+  transition: var(--transition-fast);
+}
+
+.approach-card:hover .approach-icon-box {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: var(--accent-light);
+  transform: scale(1.05);
+}
+
+.approach-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.approach-description {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}

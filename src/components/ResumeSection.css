@@ -1,0 +1,313 @@
+.resume-section {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.dual-resume-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.resume-feature-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+.resume-feature-card.active-card {
+  border-color: rgba(20, 184, 166, 0.45);
+  box-shadow: 0 12px 32px rgba(20, 184, 166, 0.12);
+}
+
+.resume-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resume-icon-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-icon-badge.python {
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  color: var(--accent-light);
+}
+
+.resume-icon-badge.fullstack {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: #22d3ee;
+}
+
+.specialty-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.resume-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.resume-card-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.resume-points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.resume-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.resume-check-icon {
+  color: var(--accent-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.resume-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.resume-action-btn {
+  flex: 1;
+  min-width: 140px;
+}
+
+.preview-toggle-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  font-size: 0.78rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-muted);
+  text-align: center;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-xs);
+  transition: var(--transition-fast);
+}
+
+.preview-toggle-btn:hover,
+.preview-toggle-btn.active {
+  color: var(--accent-light);
+  border-color: rgba(20, 184, 166, 0.4);
+  background: rgba(20, 184, 166, 0.05);
+}
+
+/* On-Page Console */
+.resume-preview-console {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(3, 7, 18, 0.6);
+}
+
+.preview-console-header {
+  padding: 14px 20px;
+  background: rgba(7, 12, 24, 0.8);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.doc-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.preview-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.preview-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.preview-tab-btn:hover {
+  color: var(--text-primary);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.preview-tab-btn.active {
+  background: rgba(20, 184, 166, 0.15);
+  border-color: var(--accent-light);
+  color: #ffffff;
+}
+
+.preview-filename {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.preview-console-body {
+  padding: 32px;
+}
+
+.resume-sheet {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.sheet-header {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sheet-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.sheet-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  margin-bottom: 6px;
+}
+
+.sheet-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.sheet-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sheet-h {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--accent-lighter);
+  letter-spacing: 0.06em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sheet-text {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.sheet-edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  gap: 12px;
+}
+
+.sheet-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent-light);
+  margin-top: 2px;
+}
+
+.sheet-project-block {
+  background: rgba(7, 12, 24, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-top: 6px;
+}
+
+.sheet-proj-title {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.sheet-bullets {
+  list-style: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.sheet-bullets code {
+  color: var(--accent-lighter);
+  background: rgba(20, 184, 166, 0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  .dual-resume-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .preview-console-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .preview-tabs {
+    flex-direction: column;
+  }
+}
